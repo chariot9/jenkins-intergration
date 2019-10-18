@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd ../../
+cd /Users/trungvu/Documents/workspace/jenkins-intergration
 mvn test || TEST_ERROR=$?
 
 export REPO_NAME='jenkins-intergration'
