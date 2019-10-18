@@ -3,7 +3,7 @@
 export REPO_NAME='jenkins-intergration'
 export JOB_NAME='jenkins-intergration'
 
-if [ $TEST_ERROR -eq 0 ] ; then
+if [ $TEST_ERROR == 0 ] ; then
   curl "https://api.github.com/repos/octocat/$REPO_NAME/statuses/$(git rev-parse HEAD)?access_token=$GH_TOKEN" \
   -H "Content-Type: application/json" \
   -X POST \
