@@ -12,4 +12,10 @@ public class UserTest {
         User user = new User("Trung", 26);
         assertThat(user.getName(), Is.is("Trung"));
     }
+
+    @Test
+    public void getAge() {
+        User user = new User("Trung", 26);
+        assertThat(user.getAge(), Is.is(26));
+    }
 }
