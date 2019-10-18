@@ -1,10 +1,10 @@
-#!/bin/sh
+#!/bin/bash
 
 export REPO_NAME='jenkins-intergration'
 export JOB_NAME='jenkins-intergration'
 
 if [ $TEST_ERROR -eq 0 ] ; then
-  curl "http://api.github.com/repos/octocat/$REPO_NAME/statuses/$(git rev-parse HEAD)?access_token=$GH_TOKEN" \
+  curl "https://api.github.com/repos/octocat/$REPO_NAME/statuses/$(git rev-parse HEAD)?access_token=$GH_TOKEN" \
   -H "Content-Type: application/json" \
   -X POST \
   -d "{
@@ -14,7 +14,7 @@ if [ $TEST_ERROR -eq 0 ] ; then
       \"target_url\": \"https://81276af2.ngrok.io/job/$JOB_NAME/$BUILD_NUMBER/console\"
   }"
 else
-  curl "http://api.github.com/repos/octocat/$REPO_NAME/statuses/$(git rev-parse HEAD)?access_token=$GH_TOKEN" \
+  curl "https://api.github.com/repos/octocat/$REPO_NAME/statuses/$(git rev-parse HEAD)?access_token=$GH_TOKEN" \
   -H "Content-Type: application/json" \
   -X POST \
   -d "{
