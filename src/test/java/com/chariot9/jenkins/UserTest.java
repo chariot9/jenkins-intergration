@@ -28,7 +28,7 @@ public class UserTest {
 
     @Test
     public void getAgeAndName2() {
-        User user = new User("Trung", 25);
+        User user = new User("Trung", 26);
         assertThat(user.getName(), Is.is("Trung"));
         assertThat(user.getAge(), Is.is(26));
     }
