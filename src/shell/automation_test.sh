@@ -6,7 +6,7 @@ cd /Users/trungvu/Documents/workspace/jenkins-intergration
 export REPO_NAME='jenkins-intergration'
 export JOB_NAME='jenkins-intergration'
 
-if [[ $TEST_ERROR == 0 ]] ; then
+if [[ $TEST_ERROR == '' ]] ; then
   curl -XPOST \
     -H "Authorization: token 8f7789285354639fafc8a4af599255e5c10b9d53" \
     -H "Content-Type: application/json" \
