@@ -1,7 +1,7 @@
 #!/bin/bash
 
 cd /Users/trungvu/Documents/workspace/jenkins-intergration
-mvn test || TEST_ERROR=$?
+/usr/local/bin/mvn test || TEST_ERROR=$?
 
 export REPO_NAME='jenkins-intergration'
 export JOB_NAME='jenkins-intergration'
